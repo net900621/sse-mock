@@ -1,0 +1,41 @@
+{
+  "name": "sse-mock",
+  "version": "1.0.0",
+  "description": "sse mock server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/net900621/sse-mock.git"
+  },
+  "keywords": [
+    "sse",
+    "mock"
+  ],
+  "files": [
+    "lib/**/*"
+  ],
+  "author": "yaoyao.yy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/net900621/sse-mock/issues"
+  },
+  "homepage": "https://github.com/net900621/sse-mock#readme",
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "prettier": "^3.0.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^5.1.6"
+  }
+}
