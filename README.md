@@ -34,9 +34,9 @@ const webpackSsePlugin = new WebpackSsePlugin({
 ```
 
 const webpackSsePlugin = new WebpackWsPlugin({
-    port: 8088,
-    time: 4000,
-    data: ['xxxx', 'yyyy', 'zzzz'],
+    port: 8088, // sse server port
+    time: 4000, // mock rotation interval, not required
+    data: ['xxxx', 'yyyy', 'zzzz'], // mock data list, will return random item once
 });
 
 ```
